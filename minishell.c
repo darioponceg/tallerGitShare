@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include <unistd.h>
 
 int ft_putstr(char *string)
-{	
+{
 	int len = 0;
 	while(*string != '\0')
 	{
