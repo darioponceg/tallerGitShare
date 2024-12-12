@@ -1,10 +1,19 @@
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+int ft_putstr(char *string)
 {
-	while (*str)
+	int len = 0;
+	while(*string != '\0')
 	{
-		write (1, str, 1);
-		str++;
+		len++;
+		string++;
 	}
+	return len;
+}
+
+int	main(void)
+{
+	char *string = "Hola mundo";
+	printf("%i", ft_putstr(string));
+	return (0);
 }
